@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		A938068C278972D00067B0B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A938068B278972D00067B0B1 /* AppDelegate.swift */; };
 		A938068E278972D00067B0B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A938068D278972D00067B0B1 /* SceneDelegate.swift */; };
-		A9380690278972D00067B0B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A938068F278972D00067B0B1 /* ViewController.swift */; };
 		A9380693278972D00067B0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9380691278972D00067B0B1 /* Main.storyboard */; };
 		A9380695278972D10067B0B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9380694278972D10067B0B1 /* Assets.xcassets */; };
 		A9380698278972D10067B0B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9380696278972D10067B0B1 /* LaunchScreen.storyboard */; };
 		A93806A3278972D10067B0B1 /* DrinkWaterAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93806A2278972D10067B0B1 /* DrinkWaterAlarmTests.swift */; };
 		A93806AE278972D10067B0B1 /* DrinkWaterAlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93806AD278972D10067B0B1 /* DrinkWaterAlarmUITests.swift */; };
+		A93806BE278977E30067B0B1 /* AlertListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93806BD278977E30067B0B1 /* AlertListViewController.swift */; };
+		A93806C12789794B0067B0B1 /* AlertListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93806BF2789794B0067B0B1 /* AlertListCell.swift */; };
+		A93806C22789794B0067B0B1 /* AlertListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93806C02789794B0067B0B1 /* AlertListCell.xib */; };
+		A93806C427897B120067B0B1 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93806C327897B120067B0B1 /* Alert.swift */; };
+		A93806C627897E410067B0B1 /* AddAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93806C527897E410067B0B1 /* AddAlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,6 @@
 		A9380688278972D00067B0B1 /* DrinkWaterAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkWaterAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A938068B278972D00067B0B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A938068D278972D00067B0B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A938068F278972D00067B0B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A9380692278972D00067B0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9380694278972D10067B0B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9380697278972D10067B0B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		A93806A9278972D10067B0B1 /* DrinkWaterAlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkWaterAlarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93806AD278972D10067B0B1 /* DrinkWaterAlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkWaterAlarmUITests.swift; sourceTree = "<group>"; };
 		A93806AF278972D10067B0B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A93806BD278977E30067B0B1 /* AlertListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListViewController.swift; sourceTree = "<group>"; };
+		A93806BF2789794B0067B0B1 /* AlertListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListCell.swift; sourceTree = "<group>"; };
+		A93806C02789794B0067B0B1 /* AlertListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertListCell.xib; sourceTree = "<group>"; };
+		A93806C327897B120067B0B1 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		A93806C527897E410067B0B1 /* AddAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +109,11 @@
 			children = (
 				A938068B278972D00067B0B1 /* AppDelegate.swift */,
 				A938068D278972D00067B0B1 /* SceneDelegate.swift */,
-				A938068F278972D00067B0B1 /* ViewController.swift */,
+				A93806BD278977E30067B0B1 /* AlertListViewController.swift */,
+				A93806C527897E410067B0B1 /* AddAlertViewController.swift */,
+				A93806C327897B120067B0B1 /* Alert.swift */,
+				A93806BF2789794B0067B0B1 /* AlertListCell.swift */,
+				A93806C02789794B0067B0B1 /* AlertListCell.xib */,
 				A9380691278972D00067B0B1 /* Main.storyboard */,
 				A9380694278972D10067B0B1 /* Assets.xcassets */,
 				A9380696278972D10067B0B1 /* LaunchScreen.storyboard */,
@@ -233,6 +245,7 @@
 			files = (
 				A9380698278972D10067B0B1 /* LaunchScreen.storyboard in Resources */,
 				A9380695278972D10067B0B1 /* Assets.xcassets in Resources */,
+				A93806C22789794B0067B0B1 /* AlertListCell.xib in Resources */,
 				A9380693278972D00067B0B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9380690278972D00067B0B1 /* ViewController.swift in Sources */,
 				A938068C278972D00067B0B1 /* AppDelegate.swift in Sources */,
 				A938068E278972D00067B0B1 /* SceneDelegate.swift in Sources */,
+				A93806C12789794B0067B0B1 /* AlertListCell.swift in Sources */,
+				A93806C427897B120067B0B1 /* Alert.swift in Sources */,
+				A93806BE278977E30067B0B1 /* AlertListViewController.swift in Sources */,
+				A93806C627897E410067B0B1 /* AddAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "min-kyoung.DrinkWaterAlarm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -463,7 +479,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "min-kyoung.DrinkWaterAlarm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
