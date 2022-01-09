@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import UserNotifications
 
 class AlertListCell: UITableViewCell {
 
+    let userNotificationCenter = UNUserNotificationCenter.current()
+    
     @IBOutlet weak var lblMeridiem: UILabel!
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var switchAlert: UISwitch!
@@ -32,5 +35,11 @@ class AlertListCell: UITableViewCell {
         alerts[sender.tag].isOn = sender.isOn
         // 변경된 값을 다시 UserDefaults에 반영
         UserDefaults.standard.set(try? PropertyListEncoder().encode(alerts), forKey: "alerts")
+        
+        if sender.isOn {
+            userNotificationCenter.addNotificationRequest(by: alerts[sender.tag])
+        } else {
+            userNotificationCenter.removePendingNotificationRequests(withIdentifiers: [alerts[sender.tag].id])
+        }
     }
 }

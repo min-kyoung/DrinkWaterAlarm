@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import UserNotifications
 
 class AlertListViewController: UITableViewController {
     var alerts: [Alert] = []
+    let userNotificationCenter = UNUserNotificationCenter.current()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,9 @@ class AlertListViewController: UITableViewController {
             
             // 새로 만든 alerts를 UserDefaults에 저장
             UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alerts), forKey: "alerts")
+            
+            // notification 추가
+            self.userNotificationCenter.addNotificationRequest(by: newAlert)
             
             self.tableView.reloadData()
             
@@ -107,6 +112,9 @@ extension AlertListViewController {
             self.alerts.remove(at: indexPath.row)
             // 삭제한 행을 UserDefaults에도 반영
             UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alerts), forKey: "alerts")
+            // notification 삭제
+            userNotificationCenter.removePendingNotificationRequests(withIdentifiers: [alerts[indexPath.row].id])
+            
             self.tableView.reloadData()
             return
         default:
