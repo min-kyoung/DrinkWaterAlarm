@@ -75,7 +75,7 @@ extension AlertListViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0: // 첫번째 섹션
-            return "물 마실 시간"
+            return "🚰 물마실 시간"
         default:
             return nil
         }
